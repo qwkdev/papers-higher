@@ -290,6 +290,13 @@
 		#main p::selection, #main span::selection {
 			background: #77777755;
 		}
+		#main h2 {
+			font-family: Arial;
+			font-weight: 500;
+			font-size: 5vw;
+			color: #fff;
+			margin: -.5vw 3vw 3vw 3vw;
+		}
 		#fade-wrap {
 			position: relative;
 			width: 100vw;
@@ -325,17 +332,17 @@
 			border-spacing: 0;
 			color: #fff;
 		}
-		#main table td::selection, #main table th::selection {
+		#main table td::selection, #main table th::selection, #main h2::selection {
 			background: #ffffff55;
 		}
-		#main table a::selection {
+		#main table a::selection, #main h2 a::selection {
 			background: #0088ff55;
 		}
-		#main table a {
+		#main table a, #main h2 a {
 			color: #0088ff;
 			transition: .1s;
 		}
-		#main table a:hover {
+		#main table a:hover, #main h2 a:hover {
 			color: #00aaff;
 		}
 		#main table th {
@@ -522,11 +529,14 @@
 			#main table th, #main table td {
 				border-width: .25vh;
 			}
-			#main table tr {
+			#main table tr, #main h2 {
 				font-size: 4vh;
 			}
 			#main table tr th, #main table tr td {
 				padding: 1vh 2vh;
+			}
+			#main h2 {
+				margin: -1.7vh 3vw 3vh 3vw;
 			}
 		}
 		@media only screen and (max-width: 130vh) {
@@ -585,6 +595,10 @@
 			#main table tr th, #main table tr td {
 				padding: 1.5vw 2.5vw;
 			}
+			#main h2 {
+				font-size: 6vw;
+				margin: -1.7vw 3vw 3vw 3vw;
+			}
 		}
 	</style>
 </head>
@@ -622,6 +636,8 @@
 			<span id="visits">Loading visits...</span>
 		</p>
 
+		<h2 style="display: none;">{{ extra }}</h2>
+
 		<div id="fade-wrap"><main id="table-wrap" aria-label="Past Paper Section">
 			<table aria-label="Past Papers">
 <thead><tr><th>Year</th><th>Environments</th><th></th><th>Issues</th><th></th><th></th><th>All</th><th></th></tr></thead><tbody><tr><td>2024</td><td><a href="/geo/2024/H_Geography_2024_Environments_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2024/H_Geography_2024_Environments_Marking.pdf" target="_blank">Marking</a></td><td><a href="/geo/2024/H_Geography_2024_Issues_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2024/H_Geography_2024_Map.pdf" target="_blank">Map</a></td><td><a href="/geo/2024/H_Geography_2024_Issues_Marking.pdf" target="_blank">Marking</a></td><td></td><td></td></tr><tr><td>2023</td><td><a href="/geo/2023/H_Geography_2023_Environments_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2023/H_Geography_2023_Environments_Marking.pdf" target="_blank">Marking</a></td><td><a href="/geo/2023/H_Geography_2023_Issues_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2023/H_Geography_2023_Map.pdf" target="_blank">Map</a></td><td><a href="/geo/2023/H_Geography_2023_Issues_Marking.pdf" target="_blank">Marking</a></td><td></td><td></td></tr><tr><td>2022</td><td><a href="/geo/2022/H_Geography_2022_Environments_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2022/H_Geography_2022_Environments_Marking.pdf" target="_blank">Marking</a></td><td><a href="/geo/2022/H_Geography_2022_Issues_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2022/H_Geography_2022_Map.pdf" target="_blank">Map</a></td><td><a href="/geo/2022/H_Geography_2022_Issues_Marking.pdf" target="_blank">Marking</a></td><td></td><td></td></tr><tr><td>2021</td><td><a href="/geo/2021/H_Geography_2021_Environments_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2021/H_Geography_2021_Environments_Marking.pdf" target="_blank">Marking</a></td><td><a href="/geo/2021/H_Geography_2021_Issues_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2021/H_Geography_2021_Map.pdf" target="_blank">Map</a></td><td><a href="/geo/2021/H_Geography_2021_Issues_Marking.pdf" target="_blank">Marking</a></td><td></td><td></td></tr><tr><td>2019</td><td><a href="/geo/2019/H_Geography_2019_Environments_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2019/H_Geography_2019_Environments_Marking.pdf" target="_blank">Marking</a></td><td><a href="/geo/2019/H_Geography_2019_Issues_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2019/H_Geography_2019_Map.pdf" target="_blank">Map</a></td><td><a href="/geo/2019/H_Geography_2019_Issues_Marking.pdf" target="_blank">Marking</a></td><td></td><td></td></tr><tr><td>2015</td><td></td><td></td><td></td><td><a href="/geo/2015/H_Geography_2015_Map.pdf" target="_blank">Map</a></td><td></td><td><a href="/geo/2015/H_Geography_2015_Paper.pdf" target="_blank">Paper</a></td><td><a href="/geo/2015/H_Geography_2015_Marking.pdf" target="_blank">Marking</a></td></tr></tbody>
@@ -640,7 +656,11 @@
 		var time = new Date("29 Apr, 2025 00:00:00").getTime() - new Date().getTime();
 		var days = Math.ceil(time / (1000 * 60 * 60 * 24));
 		if (time >= 0) {
-			document.getElementById("name").innerHTML = `H Geography - ${days} days`;
+			if (days == 1) {
+				document.getElementById("name").innerHTML = `H Geography - ${days} day`;
+			} else {
+				document.getElementById("name").innerHTML = `H Geography - ${days} days`;
+			}
 		} else if (days == 0) {
 			document.getElementById("name").innerHTML = `H Geography - Today`;
 		}
