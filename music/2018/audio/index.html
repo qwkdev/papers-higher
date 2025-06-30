@@ -935,6 +935,7 @@
 
 	<section id="main" aria-label="Page Content">
 		<h1 id="name" aria-label="Subject Name">H Music 2018 Audio</h1>
+		<p></p>
 		<p id="visits">Loading visits...</p>
 
 		<main id="audio-player">
@@ -1031,7 +1032,7 @@
 		const audio = document.getElementById('audio');
 		const slider = document.getElementById('slider');
 
-		const bookmarks = [  ];
+		const bookmarks = [ {name: "Intro", time: 0}, {name: "1a", time: 61}, {name: "1b", time: 324}, {name: "2a", time: 384}, {name: "2b", time: 730}, {name: "3", time: 844}, {name: "4", time: 1476}, {name: "5a", time: 1938}, {name: "5b", time: 2179}, {name: "6a", time: 2245}, {name: "6b", time: 2341}, {name: "6c", time: 2442}, {name: "7", time: 2534}, {name: "8", time: 3303}, {name: "", time: audio.duration} ];
 
 		function getquestion() {
 			let closest = 0;
