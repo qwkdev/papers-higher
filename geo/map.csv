@@ -1,3 +1,4 @@
-environments;;issues;;;all;
-paper;marking;paper;map;marking;paper;marking
-environments_paper.pdf;environments_marking.pdf;issues_paper.pdf;map.pdf;issues_marking.pdf;paper.pdf;marking.pdf
+papers;;;marking;
+environments;issues;map;environments;issues
+environments_paper.pdf;issues_paper.pdf;map.pdf;environments_marking.pdf;issues_marking.pdf
+(both;paper.pdf);;(both;marking.pdf)

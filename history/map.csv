@@ -1,3 +1,4 @@
-paper;marking;world;;scotland;
-paper;marking;paper;marking;paper;marking
-paper.pdf;marking.pdf;world_paper.pdf;world_marking.pdf;scotland_paper.pdf;scotland_marking.pdf
+papers;;marking;
+world;scotland;world;scotland
+world_paper.pdf;scotland_paper.pdf;world_marking.pdf;scotland_marking.pdf
+(Both;paper.pdf);(Both;marking.pdf)
