@@ -724,6 +724,7 @@ button.qchat-toggle {
 	function toggleSearch() {
 		setTimeout(() => {
 			topNav.dataset.search = topNav.dataset.search == 0 ? 1 : 0;
+			if (topNav.dataset.search) setTimeout(() => topQuery.focus(), 50);
 		}, 50);
 	}
 	document.addEventListener('click', event => {
