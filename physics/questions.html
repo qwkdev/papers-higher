@@ -621,7 +621,7 @@ button.qchat-toggle {
 			table-layout: auto;
 			background: var(--glass-bg);
 		}
-		#view-topic table td::selection, #main h2::selection {
+		#view-topic table td::selection, #main h2::selection, #view-topic table p::selection {
 			background: #ffffff55;
 		}
 		#view-topic table a::selection, #main h2 a::selection {
@@ -658,6 +658,13 @@ button.qchat-toggle {
 		}
 		#view-topic table tr td {
 			padding: calc(.8 * var(--u)) calc(1.8 * var(--u));
+		}
+		#view-topic table p {
+			font-family: Arial;
+			font-size: calc(4.2 * var(--u));
+			font-weight: 500;
+			color: #fff;
+			margin: 0;
 		}
 		
 		@media only screen and (min-aspect-ratio: 1.7/1) {

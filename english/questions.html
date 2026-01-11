@@ -6,33 +6,33 @@
 	<link rel="icon" href="https://raw.githubusercontent.com/qwkdev/sqa/refs/heads/main/icon/english.svg" type="image/svg+xml">
 	
 	<meta charset="UTF-8">
-	<meta name="description" content="Archive of H English Grades past papers, marking schemes and resources.">
-	<meta name="keywords" content="SQA, past papers, marking schemes, exams, Grade Boundaries, Grades, Reports, Past Reports, higher, english, English, English, resources, education, past papers archive">
+	<meta name="description" content="Archive of H English past papers, marking schemes and resources.">
+	<meta name="keywords" content="SQA, past papers, marking schemes, exams, higher, english, English, English, resources, education, past papers archive">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#141415">
 	<meta name="color-scheme" content="dark light">
 	<meta name="author" content="qwk">
-	<meta property="og:title" content="Higher English Grade Boundaries | SQA.MY">
-	<meta property="og:description" content="Archive of H English Grades past papers, marking schemes and resources. Click here for access, completely and always free">
+	<meta property="og:title" content="Higher English Past Papers | SQA.MY">
+	<meta property="og:description" content="Archive of H English past papers, marking schemes and resources. Click here for access, completely and always free">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="SQA.MY">
 	<meta property="og:locale" content="en_GB">
 
-	<meta property="og:image" content="https://og.tailgraph.com/og?fontFamily=Montserrat&title=H English Grades Past Papers&titleTailwind=font-bold%20text-6xl%20text-white&text=Past%20papers%20from%20the%20largest%20archive%20of%20SQA%20past%20papers&textTailwind=text-2xl%20mt-4%20bg-blueGray-300%20text-gray-300&logoUrl=&logoTailwind=h-8&bgTailwind=bg-black&footer=sqa.my&footerTailwind=text-blue-400%20text-3xl&t=1744575448853&refresh=1">
-	<meta property="og:image:alt" content="H English Grades Past Papers">
+	<meta property="og:image" content="https://og.tailgraph.com/og?fontFamily=Montserrat&title=H English Past Papers&titleTailwind=font-bold%20text-6xl%20text-white&text=Past%20papers%20from%20the%20largest%20archive%20of%20SQA%20past%20papers&textTailwind=text-2xl%20mt-4%20bg-blueGray-300%20text-gray-300&logoUrl=&logoTailwind=h-8&bgTailwind=bg-black&footer=sqa.my&footerTailwind=text-blue-400%20text-3xl&t=1744575448853&refresh=1">
+	<meta property="og:image:alt" content="H English Past Papers">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
 	
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="SQA.MY">
 	<meta name="twitter:site" content="@qwkdev">
-	<meta name="twitter:description" content="Archive of H English Grades past papers, marking schemes and resources. Click here for access, completely and always free">
-	<meta property="og:image" content="https://og.tailgraph.com/og?fontFamily=Montserrat&title=H English Grades Past Papers&titleTailwind=font-bold%20text-6xl%20text-white&text=Past%20papers%20from%20the%20largest%20archive%20of%20SQA%20past%20papers&textTailwind=text-2xl%20mt-4%20bg-blueGray-300%20text-gray-300&logoUrl=&logoTailwind=h-8&bgTailwind=bg-black&footer=sqa.my&footerTailwind=text-blue-400%20text-3xl&t=1744575448853&refresh=1">
-	<meta name="twitter:image:alt" content="H English Grades Past Papers">
+	<meta name="twitter:description" content="Archive of H English past papers, marking schemes and resources. Click here for access, completely and always free">
+	<meta property="og:image" content="https://og.tailgraph.com/og?fontFamily=Montserrat&title=H English Past Papers&titleTailwind=font-bold%20text-6xl%20text-white&text=Past%20papers%20from%20the%20largest%20archive%20of%20SQA%20past%20papers&textTailwind=text-2xl%20mt-4%20bg-blueGray-300%20text-gray-300&logoUrl=&logoTailwind=h-8&bgTailwind=bg-black&footer=sqa.my&footerTailwind=text-blue-400%20text-3xl&t=1744575448853&refresh=1">
+	<meta name="twitter:image:alt" content="H English Past Papers">
 
 	<meta name="google-adsense-account" content="ca-pub-5151386677524536">
 
-	<title>Higher English Grade Boundaries | SQA.MY</title>
+	<title>Higher English Past Papers | SQA.MY</title>
 	<style>
 :root {
 	--bg: #141415;
@@ -531,88 +531,151 @@ button.qchat-toggle {
 	display: none;
 }
 
-		#fade-wrap {
+		#topics {
+			column-count: 2;
+			gap: var(--side);
+			margin: 0 var(--side);
 			margin-top: calc(2.7 * var(--u));
-			position: relative;
-			width: 100vw;
 		}
-		#fade-wrap::before, #fade-wrap::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			width: var(--side);
-			height: 100%;
-			z-index: 10;
+		
+		#main .topic {
+			margin-bottom: var(--side);
+			width: 100%;
+			border: calc(.3 * var(--u)) solid var(--glass-border);
+			border-radius: calc(2 * var(--u));
+			background: transparent;
+			padding: 0;
 		}
-		#fade-wrap::before {
-			left: 0;
-			background: linear-gradient(to right, #141415ff, #14141500);
-		}
-		#fade-wrap::after {
-			right: 0;
-			background: linear-gradient(to left, #141415ff, #14141500);
-		}
-		#table-wrap {
-			width: 100vw;
-			margin: 0;
-			padding-bottom: calc(2 * var(--u));
-			position: relative;
-			height: min-content;
-			overflow-x: scroll;
-		}
-		#table-wrap::-webkit-scrollbar {
+		#main .topic table {
 			display: none;
 		}
-		#main table {
+		#main .topic:hover > h2, #main .topic:hover > p {
+			background: var(--glass-bg-hover);
+		}
+		#main .topic h2, #view-topic h2 {
+			width: 100%;
+			box-sizing: border-box;
+			font-size: calc(4.2 * var(--u));
+			text-decoration: underline;
+			text-align: center;
+			margin: 0;
+			padding: calc(1.2 * var(--u)) calc(.8 * var(--u));
+			background: var(--glass-bg);
+			border: none;
+			border-bottom: calc(.3 * var(--u)) solid var(--glass-border);
+			border-radius: calc(1.7 * var(--u)) calc(1.7 * var(--u)) 0 0;
+			font-weight: 500;
+			transition: .2s;
+		}
+		#main .topic p {
+			background: var(--glass-bg);
+			margin: 0;
+			text-align: left;
+			padding: calc(1.5 * var(--u));
+			font-size: calc(2.4 * var(--u));
+			border-radius: 0 0 calc(1.7 * var(--u)) calc(1.7 * var(--u));
+			transition: .2s;
+		}
+
+		#topic-modal {
+			position: fixed;
+			top: 0;
+			left: 0;
+			max-width: 100%;
+			max-height: 100%;
+			width: 100%;
+			height: 100%;
+			background: #0007;
+			border: none;
+			padding: none;
+			margin: none;
+			box-sizing: border-box;
+		}
+		#view-topic {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			width: min-content;
+			max-width: 70vw;
+			height: 82vh;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+
+			border: calc(.3 * var(--u)) solid var(--glass-border);
+			border-radius: calc(2 * var(--u));
+			background: var(--bg);
+		}
+		#view-topic table {
 			--corner: calc(2 * var(--u));
-			margin: 0 var(--side);
+			display: block;
 			width: max-content;
+			max-height: 100%;
+			flex-grow: 1;
+			overflow-y: scroll;
+
 			border-spacing: 0;
 			color: #fff;
+			table-layout: auto;
+			background: var(--glass-bg);
 		}
-		#main table td::selection, #main table th::selection, #main h2::selection {
+		#view-topic table td::selection, #main h2::selection, #view-topic table p::selection {
 			background: #ffffff55;
 		}
-		#main table a::selection, #main h2 a::selection {
+		#view-topic table a::selection, #main h2 a::selection {
 			background: #0088ff55;
 		}
-		#main table a, #main h2 a {
+		#view-topic table a, #main h2 a {
 			color: #0088ff;
 			transition: .1s;
 		}
-		#main table a:hover, #main h2 a:hover {
+		#view-topic table a:hover, #main h2 a:hover {
 			color: #00aaff;
 		}
-		#main table th {
-			border: calc(.2 * var(--u)) solid #5a5a5b;
-			font-weight: 700;
-		}
-		#main table td {
-			border: calc(.2 * var(--u)) solid #2a2a2b;
+		#view-topic table td {
+			border: calc(.3 * var(--u)) solid var(--glass-border);
 			font-weight: 500;
 			border-top: none;
 		}
-		#main table tr:first-child th:first-child {
-			border-top-left-radius: var(--corner);
+		#view-topic table td:first-child {
+			border-left: none;
 		}
-		#main table tr:first-child th:last-child {
-			border-top-right-radius: var(--corner);
+		#view-topic table td:last-child {
+			border-right: none;
+			width: 0;
 		}
-		#main table tr:last-child td:first-child {
-			border-bottom-left-radius: var(--corner);
+		#view-topic table tr td:not(:last-child) {
+			border-right: none;
 		}
-		#main table tr:last-child td:last-child {
-			border-bottom-right-radius: var(--corner);
+		#view-topic table tr:last-child td {
+			border-bottom: none;
 		}
-		#main table tr {
+		#view-topic table tr {
 			font-family: Arial;
 			font-size: calc(4.2 * var(--u));
 		}
-		#main table tr th, #main table tr td {
+		#view-topic table tr td {
 			padding: calc(.8 * var(--u)) calc(1.8 * var(--u));
 		}
-		#main table tr th:not(:last-child), #main table tr td:not(:last-child) {
-			border-right: none;
+		#view-topic table p {
+			font-family: Arial;
+			font-size: calc(4.2 * var(--u));
+			font-weight: 500;
+			color: #fff;
+			margin: 0;
+		}
+		
+		@media only screen and (min-aspect-ratio: 1.7/1) {
+			#topics {
+				column-count: 3;
+			}
+		}
+		@media only screen and (max-aspect-ratio: 1/1.5) {
+			#topics {
+				column-count: 1;
+			}
 		}
 
 @media only screen and (min-aspect-ratio: 1/1) {
@@ -664,7 +727,7 @@ button.qchat-toggle {
 </header>
 
 	<section id="main" aria-label="Page Content">
-		<h1 id="name" aria-label="Subject Name">H English Grades</h1>
+		<h1 id="name" aria-label="Subject Name">H English</h1>
 		<p>
 			Archive of SQA past papers and resources<br>
 			The provided files are exclusively for supporting the studies of SQA qualifications.<br>
@@ -675,20 +738,22 @@ button.qchat-toggle {
 			<span id="visits">Loading visits...</span>
 		</p>
 
-		<h2><a href="/english">Back to Papers</a>, <a href="/english/questions">Sorted Questions</a>, <a href="/english/reports">Course Reports</a></h2>
+		<h2><a href="/english">Back to Papers</a>, <a href="/english/grades">Grade Boundaries</a>, <a href="/english/reports">Course Reports</a></h2>
 
-		<div id="contributors" hidden>
+		<div id="contributors">
 			<div>
 				<p>Contributors:</p>
 			</div>
-
+<div><p>qwk</p></div>
 		</div>
 
-		<div id="fade-wrap"><main id="table-wrap" aria-label="Past Paper Section">
-			<table aria-label="Past Papers">
-<thead><tr><th>Year</th><th>Max</th><th>A*</th><th>A</th><th>B</th><th>C</th><th>D</th><th>A*%</th><th>A%</th><th>B%</th><th>C%</th><th>D%</th></tr></thead><tbody><tr><td>2025</td><td>100</td><td>77</td><td>68</td><td>58</td><td>49</td><td>39</td><td>77%</td><td>68%</td><td>58%</td><td>49%</td><td>39%</td></tr><tr><td>2024</td><td>100</td><td>76</td><td>67</td><td>57</td><td>48</td><td>38</td><td>76%</td><td>67%</td><td>57%</td><td>48%</td><td>38%</td></tr><tr><td>2023</td><td>100</td><td>76</td><td>67</td><td>57</td><td>48</td><td>38</td><td>76%</td><td>67%</td><td>57%</td><td>48%</td><td>38%</td></tr><tr><td>2022</td><td>100</td><td>77</td><td>68</td><td>57</td><td>47</td><td>36</td><td>77%</td><td>68%</td><td>57%</td><td>47%</td><td>36%</td></tr><tr><td>2019</td><td>100</td><td>75</td><td>67</td><td>57</td><td>48</td><td>38</td><td>75%</td><td>67%</td><td>57%</td><td>48%</td><td>38%</td></tr><tr><td>2018</td><td>100</td><td>77</td><td>69</td><td>59</td><td>50</td><td>45</td><td>77%</td><td>69%</td><td>59%</td><td>50%</td><td>45%</td></tr><tr><td>2017</td><td>100</td><td>76</td><td>68</td><td>58</td><td>49</td><td>44</td><td>76%</td><td>68%</td><td>58%</td><td>49%</td><td>44%</td></tr><tr><td>2016</td><td>100</td><td>76</td><td>68</td><td>59</td><td>50</td><td>45</td><td>76%</td><td>68%</td><td>59%</td><td>50%</td><td>45%</td></tr><tr><td>2015</td><td>100</td><td>81</td><td>74</td><td>65</td><td>56</td><td>51</td><td>81%</td><td>74%</td><td>65%</td><td>56%</td><td>51%</td></tr></tbody>
-			</table>
-		</main></div>
+		<div id="topics">
+<button class="topic" onclick="show(this)"><h2>Don Paterson</h2><p>10 Questions</p><table><tr><td><p>The Ferryman's Arms</p></td><td><a href="/english/2025/H_English_2025_Reading_Paper.pdf#page=30" target="_blank">2025 P2 Q6</a></td><td><a href="/english/2025/H_English_2025_Reading_Marking.pdf#page=76" target="_blank">Marking</a></td></tr><tr><td><p>Nil Nil</p></td><td><a href="/english/2024/H_English_2024_Reading_Paper.pdf#page=32" target="_blank">2024 P2 Q6</a></td><td><a href="/english/2024/H_English_2024_Reading_Marking.pdf#page=70" target="_blank">Marking</a></td></tr><tr><td><p>The Circle</p></td><td><a href="/english/2023/H_English_2023_Reading_Paper.pdf#page=32" target="_blank">2023 P2 Q6</a></td><td><a href="/english/2023/H_English_2023_Reading_Marking.pdf#page=66" target="_blank">Marking</a></td></tr><tr><td><p>11:00 Baldovan</p></td><td><a href="/english/2022/H_English_2022_Reading_Paper.pdf#page=30" target="_blank">2022 P2 Q6</a></td><td><a href="/english/2022/H_English_2022_Reading_Marking.pdf#page=65" target="_blank">Marking</a></td></tr><tr><td><p>Rain</p></td><td><a href="/english/2021/H_English_2021_Reading_Paper.pdf#page=26" target="_blank">2021 P2 Q6</a></td><td><a href="/english/2021/H_English_2021_Reading_Marking.pdf#page=68" target="_blank">Marking</a></td></tr><tr><td><p>Waking with Russell</p></td><td><a href="/english/2019/H_English_2019_Reading_Paper.pdf#page=28" target="_blank">2019 P2 Q6</a></td><td><a href="/english/2019/H_English_2019_Reading_Marking.pdf#page=61" target="_blank">Marking</a></td></tr><tr><td><p>The Ferryman's Arms</p></td><td><a href="/english/2018/H_English_2018_Reading_Paper.pdf#page=28" target="_blank">2018 P2 Q6</a></td><td><a href="/english/2018/H_English_2018_Reading_Marking.pdf#page=51" target="_blank">Marking</a></td></tr><tr><td><p>Nil Nil</p></td><td><a href="/english/2017/H_English_2017_Reading_Paper.pdf#page=34" target="_blank">2017 P2 Q6</a></td><td><a href="/english/2017/H_English_2017_Reading_Marking.pdf#page=54" target="_blank">Marking</a></td></tr><tr><td><p>The Thread</p></td><td><a href="/english/2016/H_English_2016_Reading_Paper.pdf#page=28" target="_blank">2016 P2 Q6</a></td><td><a href="/english/2016/H_English_2016_Reading_Marking.pdf#page=53" target="_blank">Marking</a></td></tr><tr><td><p>Two Trees</p></td><td><a href="/english/2015/H_English_2015_Reading_Paper.pdf#page=32" target="_blank">2015 P2 Q6</a></td><td><a href="/english/2015/H_English_2015_Reading_Marking.pdf#page=61" target="_blank">Marking</a></td></tr></table></button>
+		</div>
+
+		<dialog id="topic-modal">
+			<div id="view-topic"></div>
+		</dialog>
 	</section>
 	
 <footer id="footer">
@@ -712,17 +777,32 @@ button.qchat-toggle {
 </div>
 
 	<script>
+		const topicModal = document.getElementById('topic-modal');
+		topicModal.addEventListener('click', e => {
+			if (e.target === topicModal) {
+				topicModal.close();
+			}
+		});
+
+		const viewTopic = document.getElementById('view-topic');
+		function show(e) {
+			viewTopic.innerHTML = '';
+			viewTopic.appendChild(e.querySelector('h2').cloneNode(true));
+			viewTopic.appendChild(e.querySelector('table').cloneNode(true));
+			topicModal.showModal();
+		}
+
 		if ('01 May, 2026') {
 			var time = new Date("01 May, 2026 00:00:00").getTime() - new Date().getTime();
 			var days = Math.ceil(time / (1000 * 60 * 60 * 24));
 			if (time >= 0) {
 				if (days == 1) {
-					document.getElementById("name").innerHTML = `H English Grades - ${days} day`;
+					document.getElementById("name").innerHTML = `H English - ${days} day`;
 				} else {
-					document.getElementById("name").innerHTML = `H English Grades - ${days} days`;
+					document.getElementById("name").innerHTML = `H English - ${days} days`;
 				}
 			} else if (days == 0) {
-				document.getElementById("name").innerHTML = `H English Grades - Today`;
+				document.getElementById("name").innerHTML = `H English - Today`;
 			}
 		}
 	</script>
@@ -769,7 +849,7 @@ button.qchat-toggle {
 		return session;
 	}
 
-	fetch('https://qtrack.pythonanywhere.com/visit/sqa-h-english-grades', {
+	fetch('https://qtrack.pythonanywhere.com/visit/sqa-h-english-questions', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify({
